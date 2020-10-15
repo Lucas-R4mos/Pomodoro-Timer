@@ -14,14 +14,15 @@ def countdown(finish):
     
     
     if seconds_countdown == '60':
-        seconds_countdown = '0'
+        seconds_countdown = '00'
         minutes_countdown = str(int(minutes_countdown) + 1)
 
-    if minutes_countdown == '0':
-        minutes_countdown == '00'
+    if len(minutes_countdown) == 1:
+        minutes_countdown = '0' + minutes_countdown
 
-    if seconds_countdown == '0':
-        seconds_countdown =='00'
+    if len(seconds_countdown) == 1:
+        seconds_countdown = '0' + seconds_countdown
+
 
     return str(minutes_countdown + ':' + seconds_countdown)
 
@@ -33,7 +34,7 @@ def alert():
     for repeat in range(4):
         duration = (1/5) # seconds
         freq = 660  # Hz
-        os.system('play -nq -t alsa synth {} sine {}'.format(duration,      freq))
+        os.system('play -nq -t alsa synth {} sine {}'.format(duration, freq))
         time.sleep(1/5)
 
     return
