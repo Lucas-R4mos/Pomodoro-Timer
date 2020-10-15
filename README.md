@@ -16,3 +16,9 @@ To allow your OS to sound the alarm, you must install sox:
 Then,
 
 Clone this repository and run *pomodoro.py* with Python3. Enter the desired time intervals and get to work!
+
+**PS:** If the clock still doesn't sound the alarm, try this for linux: (adapted from StackOverflow: https://stackoverflow.com/a/16573188)
+- In a terminal, type 'cd /etc/modprobe.d' then 'sudo nano blacklist.conf'
+- Comment the line that says 'blacklist pcspkr', then reboot.
+- If there's no blacklist.conf file, type ls to find the blacklist file that have the 'blacklist pcspkr' line.
+- Check also that the terminal preferences has the 'Terminal Bell' checked.
