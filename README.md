@@ -21,4 +21,4 @@ Clone this repository and run *pomodoro.py* with Python3. Enter the desired time
 - In a terminal, type 'cd /etc/modprobe.d' then 'sudo nano blacklist.conf'
 - Comment the line that says 'blacklist pcspkr', then reboot.
 - If there's no blacklist.conf file, type ls to find the blacklist file that have the 'blacklist pcspkr' line.
-- Check also that the terminal preferences has the 'Terminal Bell' checked.
+- Check also if the terminal preferences has the 'Terminal Bell' checked.
